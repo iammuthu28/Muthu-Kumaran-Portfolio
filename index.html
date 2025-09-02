@@ -10,6 +10,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!--  Favicon -->
+    <link rel="icon" type="image/png" href="/favicon.png" />
     
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -484,9 +487,29 @@
                 opacity: 0.2;
             }
         }
+        
+        /* Protection Styles */
+        .no-select {
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+        
+        .no-context {
+            -webkit-touch-callout: none;
+            -webkit-user-select: none;
+            -khtml-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
     </style>
 </head>
-<body class="bg-white dark:bg-dark-900 text-gray-800 dark:text-gray-200 transition-colors duration-300">
+<body class="bg-white dark:bg-dark-900 text-gray-800 dark:text-gray-200 transition-colors duration-300 no-select" oncontextmenu="return false;">
+    <!-- Protection Overlay -->
+    <div id="protection-overlay" style="position:fixed;top:0;left:0;width:100%;height:100%;z-index:9999;display:none;"></div>
+    
     <!-- Particles Background -->
     <div class="particles" id="particles"></div>
     
@@ -560,7 +583,7 @@
                     <h3 class="text-xl font-semibold mb-3">Supply Chain Tracker</h3>
                     <p class="text-gray-600 dark:text-gray-300 mb-4">Blockchain-based system ensuring transparency, automation, and traceability in supply chains.</p>
                     <div class="flex flex-wrap gap-2 mb-4">
-                        <span class="px-3 py-1 bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 text-sm rounded-full">Ethereum</span>
+                        <span class="px-3 py-1 bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 text-sm rounded-full">Ehereum</span>
                         <span class="px-3 py-1 bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 text-sm rounded-full">Web3.js</span>
                         <span class="px-3 py-1 bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 text-sm rounded-full">Node.js</span>
                     </div>
@@ -1049,7 +1072,9 @@
                                 </div>
                                 <div>
                                     <h4 class="font-medium">Phone</h4>
-                                    <p class="text-gray-600 dark:text-gray-400">+91 9361491358</p>
+                                    <a href="https://wa.me/919361491358" target="_blank" class="text-gray-600 dark:text-gray-400 hover:text-primary-600 dark:hover:text-primary-400 transition-colors">
+                                        +91 9361491358
+                                    </a>
                                 </div>
                             </div>
                             
@@ -1059,7 +1084,9 @@
                                 </div>
                                 <div>
                                     <h4 class="font-medium">Email</h4>
-                                    <p class="text-gray-600 dark:text-gray-400">jsathish587@gmail.com</p>
+                                    <a href="mailto:jsathish587@gmail.com" class="text-gray-600 dark:text-gray-400 hover:text-primary-600 dark:hover:text-primary-400 transition-colors">
+                                        jsathish587@gmail.com
+                                    </a>
                                 </div>
                             </div>
                             
@@ -1069,7 +1096,9 @@
                                 </div>
                                 <div>
                                     <h4 class="font-medium">Location</h4>
-                                    <p class="text-gray-600 dark:text-gray-400">Chennai, India</p>
+                                    <a href="https://www.google.com/maps/place/Chennai,+Tamil+Nadu" target="_blank" class="text-gray-600 dark:text-gray-400 hover:text-primary-600 dark:hover:text-primary-400 transition-colors">
+                                        Chennai, India
+                                    </a>
                                 </div>
                             </div>
                         </div>
@@ -1091,6 +1120,9 @@
                                 </a>
                                 <a href="https://www.instagram.com/chocolate_candy_390" target="_blank" class="social-icon">
                                     <i class="fab fa-instagram"></i>
+                                </a>
+                                <a href="https://www.facebook.com/kevin.d.mitnick.54" target="_blank" class="social-icon">
+                                    <i class="fab fa-facebook-f"></i>
                                 </a>
                             </div>
                         </div>
@@ -1115,6 +1147,69 @@
 
     <!-- JavaScript -->
     <script>
+        // Protection code - Anti-copy and anti-inspection
+        (function() {
+            // Disable right-click
+            document.addEventListener('contextmenu', function(e) {
+                e.preventDefault();
+                return false;
+            });
+            
+            // Disable text selection
+            document.addEventListener('selectstart', function(e) {
+                e.preventDefault();
+                return false;
+            });
+            
+            // Disable drag and drop
+            document.addEventListener('dragstart', function(e) {
+                e.preventDefault();
+                return false;
+            });
+            
+            // Disable F12, Ctrl+Shift+I, Ctrl+Shift+C, Ctrl+U
+            document.addEventListener('keydown', function(e) {
+                if (
+                    e.key === 'F12' || 
+                    (e.ctrlKey && e.shiftKey && e.key === 'I') || 
+                    (e.ctrlKey && e.shiftKey && e.key === 'C') || 
+                    (e.ctrlKey && e.key === 'U') ||
+                    (e.ctrlKey && e.key === 'S') ||
+                    (e.ctrlKey && e.key === 'A')
+                ) {
+                    e.preventDefault();
+                    return false;
+                }
+            });
+            
+            // Protection overlay for developer tools
+            let devToolsOpen = false;
+            const threshold = 160;
+            
+            setInterval(function() {
+                if (!devToolsOpen) {
+                    const widthThreshold = window.outerWidth - window.innerWidth > threshold;
+                    const heightThreshold = window.outerHeight - window.innerHeight > threshold;
+                    const orientation = widthThreshold ? 'vertical' : 'horizontal';
+                    
+                    if (
+                        !(heightThreshold && orientation === 'horizontal') &&
+                        !(widthThreshold && orientation === 'vertical')
+                    ) {
+                        widthThreshold && (devToolsOpen = true);
+                        heightThreshold && (devToolsOpen = true);
+                    } else {
+                        devToolsOpen = false;
+                    }
+                    
+                    if (devToolsOpen) {
+                        document.getElementById('protection-overlay').style.display = 'block';
+                        document.body.style.overflow = 'hidden';
+                    }
+                }
+            }, 1000);
+        })();
+
         // Theme toggle functionality
         const themeToggle = document.getElementById('theme-toggle');
         const htmlElement = document.documentElement;
