@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://portfolio-sathish-bio-page-4pev.vercel.app/sitemap.xml
