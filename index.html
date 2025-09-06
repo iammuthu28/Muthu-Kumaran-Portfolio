@@ -10,12 +10,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     
-    <meta name="google-site-verification" content="3c103c7db51c79">
-    
+    <meta name="google-site-verification" content="3c103c7db51c79" />
     <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://portfolio-sathish-bio-page-4pev.vercel.app/" />
     
-    <link rel="canonical" href="https://portfolio-sathish-bio-page-4pev.vercel.app/">
-    
+    <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://portfolio-sathish-bio-page-4pev.vercel.app/">
     <meta property="og:title" content="Sathish J - Portfolio | Data Analyst & Blockchain Developer">
@@ -29,15 +28,12 @@
     <meta property="twitter:description" content="Portfolio of Sathish J, a Data Analyst and Blockchain Developer specializing in decentralized applications, smart contracts, and data-driven solutions.">
     <meta property="twitter:image" content="https://raw.githubusercontent.com/sathishkevinmitnick/portfolio/main/assets/portfolio.jpg">
 
-    <link rel="sitemap" type="application/xml" href="/sitemap.xml">
-    
-    <link rel="icon" type="image/png" href="/favicon.png">
-    
+    <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
+    <link rel="icon" type="image/png" href="/favicon.png" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <script src="https://cdn.tailwindcss.com"></script>
-    
-    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     
     <script>
         (function() {
@@ -115,7 +111,7 @@
         }
     </script>
     
-    <style>
+    <style type="text/css">
         /* Splash Screen Styles */
         .splash-screen {
             position: fixed;
@@ -177,7 +173,7 @@
             font-size: 2.5rem;
             font-weight: 800;
             margin-bottom: 10px;
-            background: linear-gradient(to right, #ffffff, #f7fafc);
+            background: linear-gradient(to right, #ffffff, #e0e7ff);
             -webkit-background-clip: text;
             background-clip: text;
             color: transparent;
@@ -514,6 +510,9 @@
             font-weight: 500;
             transition: all 0.3s ease;
             box-shadow: 0 4px 6px rgba(59, 130, 246, 0.2);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
         }
         
         .btn-primary:hover {
@@ -528,6 +527,9 @@
             border-radius: 8px;
             font-weight: 500;
             transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
         }
         
         .btn-outline:hover {
@@ -728,18 +730,6 @@
             padding: 20px;
             display: none;
         }
-        
-        /* Project Images */
-        .project-image {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-            border-bottom: 1px solid #e5e7eb;
-        }
-        
-        .dark .project-image {
-            border-bottom: 1px solid #4b5563;
-        }
     </style>
 </head>
 <body class="bg-white dark:bg-dark-900 text-gray-800 dark:text-gray-200 transition-colors duration-300 no-select" oncontextmenu="return false;">
@@ -791,6 +781,64 @@
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <!-- Project 1 -->
                     <div class="bg-white dark:bg-dark-700 p-6 rounded-xl card-hover">
+                        <div class="h-40 mb-4 rounded-lg overflow-hidden">
+                            <img src="https://raw.githubusercontent.com/sathishkevinmitnick/portfolio/main/assets/cryptolink.png" 
+                                 alt="CryptoLink Payment App" 
+                                 class="w-full h-full object-cover">
+                        </div>
+                        <h3 class="text-xl font-semibold mb-3">CryptoLink Payment App</h3>
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">Decentralized payment app with ERC-20 rewards, QR payments, wallet integration, and subscriptions.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-sm rounded-full">Blockchain</span>
+                            <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-sm rounded-full">Solidity</span>
+                            <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-sm rounded-full">React</span>
+                        </div>
+                        <a href="#" class="text-blue-600 dark:text-blue-400 font-medium hover:underline flex items-center">
+                            View Details <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                    
+                    <!-- Project 2 -->
+                    <div class="bg-white dark:bg-dark-700 p-6 rounded-xl card-hover">
+                        <div class="h-40 mb-4 rounded-lg overflow-hidden">
+                            <img src="https://raw.githubusercontent.com/sathishkevinmitnick/portfolio/main/assets/tarcker.png" 
+                                 alt="Supply Chain Tracker" 
+                                 class="w-full h-full object-cover">
+                        </div>
+                        <h3 class="text-xl font-semibold mb-3">Supply Chain Tracker</h3>
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">Blockchain-based system ensuring transparency, automation, and traceability in supply chains.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 text-sm rounded-full">Ethereum</span>
+                            <span class="px-3 py-1 bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 text-sm rounded-full">Web3.js</span>
+                            <span class="px-3 py-1 bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 text-sm rounded-full">Node.js</span>
+                        </div>
+                        <a href="#" class="text-blue-600 dark:text-blue-400 font-medium hover:underline flex items-center">
+                            View Details <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                    
+                    <!-- Project 3 -->
+                    <div class="bg-white dark:bg-dark-700 p-6 rounded-xl card-hover">
+                        <div class="h-40 mb-4 rounded-lg overflow-hidden">
+                            <img src="https://raw.githubusercontent.com/sathishkevinmitnick/portfolio/main/assets/crowdfund.png" 
+                                 alt="Decentralized Crowdfunding" 
+                                 class="w-full h-full object-cover">
+                        </div>
+                        <h3 class="text-xl font-semibold mb-3">Decentralized Crowdfunding</h3>
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">Blockchain-powered crowdfunding with KYC & fraud detection using custom AML algorithm and AI chatbot.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-purple-100 dark:bg-purple-900 text-purple-800 dark:text-purple-200 text-sm rounded-full">Next.js</span>
+                            <span class="px-3 py-1 bg-purple-100 dark:bg-purple-900 text-purple-800 dark:text-purple-200 text-sm rounded-full">AI/ML</span>
+                            <span class="px-3 py-1 bg-purple-100 dark:bg-purple-900 text-purple-800 dark:text-purple-200 text-sm rounded-full">Smart Contracts</span>
+                        </div>
+                        <a href="#" class="text-blue-600 dark:text-blue-400 font-medium hover:underline flex items-center">
+                            View Details <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                    
+                    <!-- Other projects can remain as they are -->
+                    <!-- Project 4 -->
+                    <div class="bg-white dark:bg-dark-700 p-6 rounded-xl card-hover">
                         <h3 class="text-xl font-semibold mb-3">E-Commerce Platform</h3>
                         <p class="text-gray-600 dark:text-gray-300 mb-4">A full-featured e-commerce platform with product listings, cart, and checkout functionality.</p>
                         <div class="flex flex-wrap gap-2 mb-4">
@@ -803,7 +851,7 @@
                         </a>
                     </div>
                     
-                    <!-- Project 2 -->
+                    <!-- Project 5 -->
                     <div class="bg-white dark:bg-dark-700 p-6 rounded-xl card-hover">
                         <h3 class="text-xl font-semibold mb-3">Task Management App</h3>
                         <p class="text-gray-600 dark:text-gray-300 mb-4">A productivity application for managing tasks with drag-and-drop functionality.</p>
@@ -817,7 +865,7 @@
                         </a>
                     </div>
                     
-                    <!-- Project 3 -->
+                    <!-- Project 6 -->
                     <div class="bg-white dark:bg-dark-700 p-6 rounded-xl card-hover">
                         <h3 class="text-xl font-semibold mb-3">Blog Content Management</h3>
                         <p class="text-gray-600 dark:text-gray-300 mb-4">A content management system specifically designed for bloggers and content creators.</p>
@@ -825,48 +873,6 @@
                             <span class="px-3 py-1 bg-purple-100 dark:bg-purple-900 text-purple-800 dark:text-purple-200 text-sm rounded-full">Next.js</span>
                             <span class="px-3 py-1 bg-purple-100 dark:bg-purple-900 text-purple-800 dark:text-purple-200 text-sm rounded-full">GraphQL</span>
                             <span class="px-3 py-1 bg-purple-100 dark:bg-purple-900 text-purple-800 dark:text-purple-200 text-sm rounded-full">PostgreSQL</span>
-                        </div>
-                        <a href="#" class="text-blue-600 dark:text-blue-400 font-medium hover:underline flex items-center">
-                            View Details <i class="fas fa-arrow-right ml-2"></i>
-                        </a>
-                    </div>
-                    
-                    <!-- Project 4 -->
-                    <div class="bg-white dark:bg-dark-700 p-6 rounded-xl card-hover">
-                        <h3 class="text-xl font-semibold mb-3">CryptoLink Payment App</h3>
-                        <p class="text-gray-600 dark:text-gray-300 mb-4">Decentralized payment app with ERC-20 rewards, QR payments, wallet integration, and subscriptions.</p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-sm rounded-full">Blockchain</span>
-                            <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-sm rounded-full">Solidity</span>
-                            <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-sm rounded-full">React</span>
-                        </div>
-                        <a href="#" class="text-blue-600 dark:text-blue-400 font-medium hover:underline flex items-center">
-                            View Details <i class="fas fa-arrow-right ml-2"></i>
-                        </a>
-                    </div>
-                    
-                    <!-- Project 5 -->
-                    <div class="bg-white dark:bg-dark-700 p-6 rounded-xl card-hover">
-                        <h3 class="text-xl font-semibold mb-3">Supply Chain Tracker</h3>
-                        <p class="text-gray-600 dark:text-gray-300 mb-4">Blockchain-based system ensuring transparency, automation, and traceability in supply chains.</p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="px-3 py-1 bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 text-sm rounded-full">Ehereum</span>
-                            <span class="px-3 py-1 bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 text-sm rounded-full">Web3.js</span>
-                            <span class="px-3 py-1 bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 text-sm rounded-full">Node.js</span>
-                        </div>
-                        <a href="#" class="text-blue-600 dark:text-blue-400 font-medium hover:underline flex items-center">
-                            View Details <i class="fas fa-arrow-right ml-2"></i>
-                        </a>
-                    </div>
-                    
-                    <!-- Project 6 -->
-                    <div class="bg-white dark:bg-dark-700 p-6 rounded-xl card-hover">
-                        <h3 class="text-xl font-semibold mb-3">Crowdfunding Platform</h3>
-                        <p class="text-gray-600 dark:text-gray-300 mb-4">Blockchain-powered crowdfunding with KYC & fraud detection using custom AML algorithm and AI chatbot.</p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="px-3 py-1 bg-purple-100 dark:bg-purple-900 text-purple-800 dark:text-purple-200 text-sm rounded-full">Next.js</span>
-                            <span class="px-3 py-1 bg-purple-100 dark:bg-purple-900 text-purple-800 dark:text-purple-200 text-sm rounded-full">AI/ML</span>
-                            <span class="px-3 py-1 bg-purple-100 dark:bg-purple-900 text-purple-800 dark:text-purple-200 text-sm rounded-full">Smart Contracts</span>
                         </div>
                         <a href="#" class="text-blue-600 dark:text-blue-400 font-medium hover:underline flex items-center">
                             View Details <i class="fas fa-arrow-right ml-2"></i>
@@ -929,10 +935,10 @@
                     <h2 class="text-xl md:text-2xl lg:text-3xl text-white mb-6 opacity-90 animate-fade-in-up">Data Analyst & Blockchain Developer</h2>
                     <p class="text-lg text-white mb-8 max-w-lg mx-auto md:mx-0 opacity-80 animate-fade-in-up">I create innovative blockchain solutions and data-driven applications that deliver exceptional user experiences.</p>
                     <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start animate-fade-in-up">
-                        <a href="#projects" class="btn-primary inline-flex items-center justify-center">
+                        <a href="#projects" class="btn-primary">
                             View My Work <i class="fas fa-arrow-down ml-2"></i>
                         </a>
-                        <a href="#contact" class="btn-outline inline-flex items-center justify-center">
+                        <a href="#contact" class="btn-outline">
                             Contact Me <i class="fas fa-paper-plane ml-2"></i>
                         </a>
                     </div>
@@ -1018,7 +1024,7 @@
                         </div>
                         
                         <!-- Updated CV download button with GitHub URL -->
-                        <a href="https://raw.githubusercontent.com/sathishkevinmitnick/portfolio/main/assets/Sathish_J_Resume__.pdf" download="Sathish_J_Resume.pdf" class="btn-primary inline-flex items-center">
+                        <a href="https://raw.githubusercontent.com/sathishkevinmitnick/portfolio/main/assets/Sathish_J_Resume__.pdf" download="Sathish_J_Resume.pdf" class="btn-primary">
                             <i class="fas fa-download mr-2"></i> Download CV
                         </a>
                     </div>
@@ -1139,14 +1145,14 @@
                 <p class="text-center text-lg max-w-2xl mx-auto mb-16">Here are some of my recent projects that I've built using various technologies.</p>
                 
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <!-- Project 1 - CryptoLink -->
+                    <!-- Project 1 -->
                     <div class="bg-white dark:bg-dark-800 rounded-2xl overflow-hidden shadow-md card-hover">
-                        <div class="h-48 bg-gradient-hero flex items-center justify-center relative overflow-hidden">
+                        <div class="h-48 relative overflow-hidden">
                             <img src="https://raw.githubusercontent.com/sathishkevinmitnick/portfolio/main/assets/cryptolink.png" 
                                  alt="CryptoLink Payment App" 
-                                 class="project-image">
-                            <div class="absolute inset-0 bg-black opacity-20"></div>
-                            <span class="text-white text-2xl font-bold text-center p-4 z-10">CryptoLink Payment App</span>
+                                 class="w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-black opacity-40"></div>
+                            <span class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-2xl font-bold text-center p-4 z-10">CryptoLink Payment App</span>
                         </div>
                         <div class="p-6">
                             <h3 class="text-xl font-heading font-semibold mb-3">CryptoLink</h3>
@@ -1162,14 +1168,14 @@
                         </div>
                     </div>
                     
-                    <!-- Project 2 - Supply Chain Tracker -->
+                    <!-- Project 2 -->
                     <div class="bg-white dark:bg-dark-800 rounded-2xl overflow-hidden shadow-md card-hover">
-                        <div class="h-48 bg-gradient-conic from-green-400 to-blue-500 flex items-center justify-center relative overflow-hidden">
+                        <div class="h-48 relative overflow-hidden">
                             <img src="https://raw.githubusercontent.com/sathishkevinmitnick/portfolio/main/assets/tarcker.png" 
                                  alt="Supply Chain Tracker" 
-                                 class="project-image">
-                            <div class="absolute inset-0 bg-black opacity-20"></div>
-                            <span class="text-white text-2xl font-bold text-center p-4 z-10">Supply Chain Tracker</span>
+                                 class="w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-black opacity-40"></div>
+                            <span class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-2xl font-bold text-center p-4 z-10">Supply Chain Tracker</span>
                         </div>
                         <div class="p-6">
                             <h3 class="text-xl font-heading font-semibold mb-3">Supply Chain Tracker</h3>
@@ -1185,14 +1191,14 @@
                         </div>
                     </div>
                     
-                    <!-- Project 3 - Crowdfunding Platform -->
+                    <!-- Project 3 -->
                     <div class="bg-white dark:bg-dark-800 rounded-2xl overflow-hidden shadow-md card-hover">
-                        <div class="h-48 bg-gradient-hero flex items-center justify-center relative overflow-hidden">
+                        <div class="h-48 relative overflow-hidden">
                             <img src="https://raw.githubusercontent.com/sathishkevinmitnick/portfolio/main/assets/crowdfund.png" 
                                  alt="Decentralized Crowdfunding" 
-                                 class="project-image">
-                            <div class="absolute inset-0 bg-black opacity-20"></div>
-                            <span class="text-white text-2xl font-bold text-center p-4 z-10">Decentralized Crowdfunding</span>
+                                 class="w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-black opacity-40"></div>
+                            <span class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-2xl font-bold text-center p-4 z-10">Decentralized Crowdfunding</span>
                         </div>
                         <div class="p-6">
                             <h3 class="text-xl font-heading font-semibold mb-3">Crowdfunding Platform</h3>
@@ -1210,7 +1216,7 @@
                 </div>
                 
                 <div class="text-center mt-12">
-                    <button id="view-all-projects" class="btn-primary inline-flex items-center">
+                    <button id="view-all-projects" class="btn-primary">
                         <i class="fas fa-th-large mr-2"></i> View All Projects
                     </button>
                 </div>
@@ -1330,9 +1336,9 @@
                             </div>
                             <div>
                                 <label for="message" class="block mb-2 font-medium">Your Message</label>
-                                <textarea id="message" name="message" rows="5" class="form-input" placeholder="Hello..."></textarea>
+                                <textarea id="message" name="message" rows="5" class="form-input" placeholder="Hello..." required></textarea>
                             </div>
-                            <button type="submit" class="btn-primary w-full inline-flex items-center justify-center">
+                            <button type="submit" class="btn-primary w-full">
                                 <i class="fas fa-paper-plane mr-2"></i> Send Message
                             </button>
                         </form>
@@ -1425,6 +1431,7 @@
 
     <!-- JavaScript -->
     <script>
+        
         (function() {
             document.addEventListener('contextmenu', function(e) {
                 e.preventDefault();
@@ -1484,6 +1491,7 @@
                     overlay.innerHTML = '<div><h2 style="font-size: 24px; margin-bottom: 20px;">Access Restricted</h2><p style="margin-bottom: 15px;">' + message + '</p><p>Please respect the website\'s security policies.</p></div>';
                     overlay.style.display = 'flex';
                     
+                    
                     setTimeout(() => {
                         overlay.style.display = 'none';
                     }, 5000);
@@ -1502,6 +1510,7 @@
             }, 500);
         })();
 
+        
         document.addEventListener('DOMContentLoaded', function() {
             const splashScreen = document.getElementById('splash-screen');
             const portfolioContent = document.getElementById('portfolio-content');
@@ -1513,14 +1522,18 @@
                     splashScreen.style.display = 'none';
                     portfolioContent.classList.add('visible');
                     
+                    
                     initPortfolio();
                 }, 500);
             }, 3500);
         });
 
+        
         function initPortfolio() {
+            
             const themeToggle = document.getElementById('theme-toggle');
             const htmlElement = document.documentElement;
+            
             
             if (localStorage.getItem('theme') === 'dark' || 
                 (!localStorage.getItem('theme') && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
@@ -1529,10 +1542,12 @@
                 htmlElement.classList.remove('dark');
             }
             
+       
             themeToggle.addEventListener('click', () => {
                 htmlElement.classList.toggle('dark');
                 localStorage.setItem('theme', htmlElement.classList.contains('dark') ? 'dark' : 'light');
             });
+            
             
             const mobileMenuButton = document.getElementById('mobile-menu-button');
             const mobileMenu = document.getElementById('mobile-menu');
@@ -1541,12 +1556,14 @@
                 mobileMenu.classList.toggle('hidden');
             });
             
+           
             document.querySelectorAll('#mobile-menu a').forEach(link => {
                 link.addEventListener('click', () => {
                     mobileMenu.classList.add('hidden');
                 });
             });
             
+           
             document.querySelectorAll('a[href^="#"]').forEach(anchor => {
                 anchor.addEventListener('click', function (e) {
                     e.preventDefault();
@@ -1564,6 +1581,7 @@
                 });
             });
             
+           
             const observerOptions = {
                 threshold: 0.5,
                 rootMargin: '0px 0px -100px 0px'
@@ -1588,6 +1606,7 @@
                 observer.observe(section);
             });
 
+            
             function showToast(message, isError = false) {
                 const toast = document.getElementById('toast');
                 toast.textContent = message;
@@ -1607,17 +1626,20 @@
                 }, 3000);
             }
 
+            
             document.getElementById('contact-form').addEventListener('submit', async function(e) {
                 e.preventDefault();
                 
                 const formData = new FormData(this);
                 const submitButton = this.querySelector('button[type="submit"]');
                 
+               
                 const originalText = submitButton.innerHTML;
                 submitButton.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i> Sending...';
                 submitButton.disabled = true;
                 
                 try {
+                   
                     const emailData = {
                         from_name: formData.get('name'),
                         from_email: formData.get('email'),
@@ -1626,11 +1648,13 @@
                         reply_to: formData.get('email')
                     };
                     
+                    
                     await emailjs.send(
                         'service_7wyyxe9', 
                         'template_mwhva5h', 
                         emailData
                     );
+                    
                     
                     showToast('Message sent successfully! I\'ll get back to you soon.');
                     this.reset();
@@ -1639,15 +1663,18 @@
                     console.error('EmailJS Error:', error);
                     showToast('Sorry, there was an error sending your message. Please try again later.', true);
                 } finally {
+                    
                     submitButton.innerHTML = originalText;
                     submitButton.disabled = false;
                 }
             });
 
+            
             document.querySelector('a[download]').addEventListener('click', function(e) {
-                // Download event handler
+                
             });
-
+            
+            
             const viewAllProjectsBtn = document.getElementById('view-all-projects');
             const projectsModal = document.getElementById('projects-modal');
             const closeModal = document.querySelector('.close');
@@ -1669,6 +1696,7 @@
                 }
             });
 
+           
             function createParticles() {
                 const particlesContainer = document.getElementById('particles');
                 const particleCount = 30;
@@ -1694,8 +1722,10 @@
                 }
             }
             
+           
             createParticles();
 
+            
             function animateOnScroll() {
                 const elements = document.querySelectorAll('.card-hover, .btn-primary, .social-icon');
                 
@@ -1704,6 +1734,7 @@
                 });
             }
             
+        
             animateOnScroll();
         }
     </script>
