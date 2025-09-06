@@ -1,11 +1,11 @@
 {
-  "name": "portfolio-sathish",
+  "name": "my-portfolio",
   "private": true,
-  "version": "1.0.0",
+  "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build && node encrypt.js",
+    "build": "tsc -b && vite build && node encrypt.js",
     "lint": "eslint .",
     "preview": "vite preview",
     "encrypt": "node encrypt.js"
@@ -21,7 +21,6 @@
   "devDependencies": {
     "@eslint/js": "^9.33.0",
     "@tailwindcss/postcss": "^4.1.12",
-    "@types/crypto-js": "^4.2.2",
     "@types/react": "^19.1.10",
     "@types/react-dom": "^19.1.7",
     "@types/react-scroll": "^1.8.10",
