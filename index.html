@@ -1,36 +1,45 @@
 <!DOCTYPE html>
-<html lang="en" class="light">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sathish J - Portfolio | Data Analyst & Blockchain Developer</title>
     <meta name="description" content="Portfolio of Sathish J, a Data Analyst and Blockchain Developer specializing in decentralized applications, smart contracts, and data-driven solutions.">
     
-    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     
-    <!-- Google Site Verification -->
-    <meta name="google-site-verification" content="3c103e570db51c79" />
-
-    <!-- Sitemap Reference -->
-    <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
-
-    <!--  Favicon -->
-    <link rel="icon" type="image/png" href="/favicon.png" />
+    <meta name="google-site-verification" content="3c103c7db51c79">
     
-    <!-- Font Awesome -->
+    <meta name="robots" content="index, follow">
+    
+    <link rel="canonical" href="https://portfolio-sathish-bio-page-4pev.vercel.app/">
+    
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://portfolio-sathish-bio-page-4pev.vercel.app/">
+    <meta property="og:title" content="Sathish J - Portfolio | Data Analyst & Blockchain Developer">
+    <meta property="og:description" content="Portfolio of Sathish J, a Data Analyst and Blockchain Developer specializing in decentralized applications, smart contracts, and data-driven solutions.">
+    <meta property="og:image" content="https://raw.githubusercontent.com/sathishkevinmitnick/portfolio/main/assets/portfolio.jpg">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://portfolio-sathish-bio-page-4pev.vercel.app/">
+    <meta property="twitter:title" content="Sathish J - Portfolio | Data Analyst & Blockchain Developer">
+    <meta property="twitter:description" content="Portfolio of Sathish J, a Data Analyst and Blockchain Developer specializing in decentralized applications, smart contracts, and data-driven solutions.">
+    <meta property="twitter:image" content="https://raw.githubusercontent.com/sathishkevinmitnick/portfolio/main/assets/portfolio.jpg">
+
+    <link rel="sitemap" type="application/xml" href="/sitemap.xml">
+    
+    <link rel="icon" type="image/png" href="/favicon.png">
+    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
-    <!-- Tailwind CSS via CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     
-    <!-- EmailJS SDK -->
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     
     <script>
-        // Initialize EmailJS with your public key
         (function() {
             emailjs.init("zFjDAktHbiY7_ZrrN");
         })();
@@ -106,7 +115,7 @@
         }
     </script>
     
-    <style type="text/css">
+    <style>
         /* Splash Screen Styles */
         .splash-screen {
             position: fixed;
@@ -168,7 +177,7 @@
             font-size: 2.5rem;
             font-weight: 800;
             margin-bottom: 10px;
-            background: linear-gradient(to right, #ffffff, #e0e7ff);
+            background: linear-gradient(to right, #ffffff, #f7fafc);
             -webkit-background-clip: text;
             background-clip: text;
             color: transparent;
@@ -693,7 +702,43 @@
 
         /* Portfolio content initially hidden */
         .portfolio-content {
+            opacity: 0;
+            transition: opacity 0.5s ease-in;
+        }
+        
+        .portfolio-content.visible {
+            opacity: 1;
+        }
+        
+        /* Protection overlay */
+        #protection-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.95);
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 99999;
+            font-family: monospace;
+            text-align: center;
+            padding: 20px;
             display: none;
+        }
+        
+        /* Project Images */
+        .project-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-bottom: 1px solid #e5e7eb;
+        }
+        
+        .dark .project-image {
+            border-bottom: 1px solid #4b5563;
         }
     </style>
 </head>
@@ -722,7 +767,13 @@
     </div>
 
     <!-- Protection Overlay -->
-    <div id="protection-overlay" style="position:fixed;top:0;left:0;width:100%;height:100%;z-index:9999;display:none;"></div>
+    <div id="protection-overlay">
+        <div>
+            <h2 style="font-size: 24px; margin-bottom: 20px;">Developer Tools Detected</h2>
+            <p style="margin-bottom: 15px;">This action is not allowed on this website.</p>
+            <p>Please close the developer tools to continue browsing.</p>
+        </div>
+    </div>
     
     <!-- Portfolio Content (initially hidden) -->
     <div class="portfolio-content" id="portfolio-content">
@@ -895,6 +946,7 @@
                             <div class="bg-primary-600 text-white rounded-full p-2">
                                 <i class="fas fa-code text-lg"></i>
                             </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -1087,9 +1139,12 @@
                 <p class="text-center text-lg max-w-2xl mx-auto mb-16">Here are some of my recent projects that I've built using various technologies.</p>
                 
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <!-- Project 1 -->
+                    <!-- Project 1 - CryptoLink -->
                     <div class="bg-white dark:bg-dark-800 rounded-2xl overflow-hidden shadow-md card-hover">
-                        <div class="h-48 bg-gradient-linear flex items-center justify-center relative overflow-hidden">
+                        <div class="h-48 bg-gradient-hero flex items-center justify-center relative overflow-hidden">
+                            <img src="https://raw.githubusercontent.com/sathishkevinmitnick/portfolio/main/assets/cryptolink.png" 
+                                 alt="CryptoLink Payment App" 
+                                 class="project-image">
                             <div class="absolute inset-0 bg-black opacity-20"></div>
                             <span class="text-white text-2xl font-bold text-center p-4 z-10">CryptoLink Payment App</span>
                         </div>
@@ -1107,9 +1162,12 @@
                         </div>
                     </div>
                     
-                    <!-- Project 2 -->
+                    <!-- Project 2 - Supply Chain Tracker -->
                     <div class="bg-white dark:bg-dark-800 rounded-2xl overflow-hidden shadow-md card-hover">
                         <div class="h-48 bg-gradient-conic from-green-400 to-blue-500 flex items-center justify-center relative overflow-hidden">
+                            <img src="https://raw.githubusercontent.com/sathishkevinmitnick/portfolio/main/assets/tarcker.png" 
+                                 alt="Supply Chain Tracker" 
+                                 class="project-image">
                             <div class="absolute inset-0 bg-black opacity-20"></div>
                             <span class="text-white text-2xl font-bold text-center p-4 z-10">Supply Chain Tracker</span>
                         </div>
@@ -1127,9 +1185,12 @@
                         </div>
                     </div>
                     
-                    <!-- Project 3 -->
+                    <!-- Project 3 - Crowdfunding Platform -->
                     <div class="bg-white dark:bg-dark-800 rounded-2xl overflow-hidden shadow-md card-hover">
                         <div class="h-48 bg-gradient-hero flex items-center justify-center relative overflow-hidden">
+                            <img src="https://raw.githubusercontent.com/sathishkevinmitnick/portfolio/main/assets/crowdfund.png" 
+                                 alt="Decentralized Crowdfunding" 
+                                 class="project-image">
                             <div class="absolute inset-0 bg-black opacity-20"></div>
                             <span class="text-white text-2xl font-bold text-center p-4 z-10">Decentralized Crowdfunding</span>
                         </div>
@@ -1269,7 +1330,7 @@
                             </div>
                             <div>
                                 <label for="message" class="block mb-2 font-medium">Your Message</label>
-                                <textarea id="message" name="message" rows="5" class="form-input" placeholder="Hello..." required></textarea>
+                                <textarea id="message" name="message" rows="5" class="form-input" placeholder="Hello..."></textarea>
                             </div>
                             <button type="submit" class="btn-primary w-full inline-flex items-center justify-center">
                                 <i class="fas fa-paper-plane mr-2"></i> Send Message
@@ -1364,95 +1425,103 @@
 
     <!-- JavaScript -->
     <script>
-        // Splash screen functionality
+        (function() {
+            document.addEventListener('contextmenu', function(e) {
+                e.preventDefault();
+                showProtectionOverlay("Right-click is disabled on this website.");
+                return false;
+            });
+            
+            document.addEventListener('selectstart', function(e) {
+                e.preventDefault();
+                return false;
+            });
+            
+            document.addEventListener('dragstart', function(e) {
+                e.preventDefault();
+                return false;
+            });
+            
+            document.addEventListener('keydown', function(e) {
+                if (
+                    e.key === 'F12' || 
+                    (e.ctrlKey && e.shiftKey && e.key === 'I') || 
+                    (e.ctrlKey && e.shiftKey && e.key === 'C') || 
+                    (e.ctrlKey && e.key === 'U') ||
+                    (e.ctrlKey && e.key === 'S') ||
+                    (e.ctrlKey && e.key === 'A') ||
+                    (e.ctrlKey && e.key === 'F') ||
+                    (e.ctrlKey && e.key === 'R')
+                ) {
+                    e.preventDefault();
+                    showProtectionOverlay("Developer tools are not allowed on this website.");
+                    return false;
+                }
+            });
+            
+            let devToolsOpen = false;
+            const threshold = 160;
+            
+            function checkDevTools() {
+                const widthThreshold = window.outerWidth - window.innerWidth > threshold;
+                const heightThreshold = window.outerHeight - window.innerHeight > threshold;
+                
+                if (widthThreshold || heightThreshold) {
+                    if (!devToolsOpen) {
+                        devToolsOpen = true;
+                        showProtectionOverlay("Developer tools detected. Please close them to continue browsing.");
+                    }
+                } else {
+                    devToolsOpen = false;
+                }
+            }
+            
+            setInterval(checkDevTools, 1000);
+            
+            function showProtectionOverlay(message) {
+                const overlay = document.getElementById('protection-overlay');
+                if (overlay) {
+                    overlay.innerHTML = '<div><h2 style="font-size: 24px; margin-bottom: 20px;">Access Restricted</h2><p style="margin-bottom: 15px;">' + message + '</p><p>Please respect the website\'s security policies.</p></div>';
+                    overlay.style.display = 'flex';
+                    
+                    setTimeout(() => {
+                        overlay.style.display = 'none';
+                    }, 5000);
+                }
+            }
+            
+            let lastWidth = window.innerWidth;
+            let lastHeight = window.innerHeight;
+            
+            setInterval(function() {
+                if (window.innerWidth !== lastWidth || window.innerHeight !== lastHeight) {
+                    checkDevTools();
+                    lastWidth = window.innerWidth;
+                    lastHeight = window.innerHeight;
+                }
+            }, 500);
+        })();
+
         document.addEventListener('DOMContentLoaded', function() {
             const splashScreen = document.getElementById('splash-screen');
             const portfolioContent = document.getElementById('portfolio-content');
             
-            // Show portfolio content after splash screen animation completes
             setTimeout(function() {
                 splashScreen.style.opacity = '0';
                 
                 setTimeout(function() {
                     splashScreen.style.display = 'none';
-                    portfolioContent.style.display = 'block';
+                    portfolioContent.classList.add('visible');
                     
-                    // Initialize the rest of the portfolio functionality
                     initPortfolio();
                 }, 500);
             }, 3500);
         });
 
-        // Initialize portfolio functionality
         function initPortfolio() {
-            // Protection code - Anti-copy and anti-inspection
-            (function() {
-                // Disable right-click
-                document.addEventListener('contextmenu', function(e) {
-                    e.preventDefault();
-                    return false;
-                });
-                
-                // Disable text selection
-                document.addEventListener('selectstart', function(e) {
-                    e.preventDefault();
-                    return false;
-                });
-                
-                // Disable drag and drop
-                document.addEventListener('dragstart', function(e) {
-                    e.preventDefault();
-                    return false;
-                });
-                
-                // Disable F12, Ctrl+Shift+I, Ctrl+Shift+C, Ctrl+U
-                document.addEventListener('keydown', function(e) {
-                    if (
-                        e.key === 'F12' || 
-                        (e.ctrlKey && e.shiftKey && e.key === 'I') || 
-                        (e.ctrlKey && e.shiftKey && e.key === 'C') || 
-                        (e.ctrlKey && e.key === 'U') ||
-                        (e.ctrlKey && e.key === 'S') ||
-                        (e.ctrlKey && e.key === 'A')
-                    ) {
-                        e.preventDefault();
-                        return false;
-                    }
-                });
-                
-                // Protection overlay for developer tools
-                let devToolsOpen = false;
-                const threshold = 160;
-                
-                setInterval(function() {
-                    if (!devToolsOpen) {
-                        const widthThreshold = window.outerWidth - window.innerWidth > threshold;
-                        const heightThreshold = window.outerHeight - window.innerHeight > threshold;
-                        const orientation = widthThreshold ? 'vertical' : 'horizontal';
-                        
-                        if (
-                            !(heightThreshold && orientation === 'horizontal') &&
-                            !(widthThreshold && orientation === 'vertical')
-                        ) {
-                            widthThreshold && (devToolsOpen = true);
-                            heightThreshold && (devToolsOpen = true);
-                        } else {
-                            devToolsOpen = false;
-                        }
-                        
-                        if (devToolsOpen) {
-                            document.getElementById('protection-overlay').style.display = 'block';
-                            document.body.style.overflow = 'hidden';
-                        }
-                    }
-                }, 1000);
-            })();
-
-            // Theme toggle functionality
             const themeToggle = document.getElementById('theme-toggle');
             const htmlElement = document.documentElement;
             
-            // Check for saved theme preference or respect OS preference
             if (localStorage.getItem('theme') === 'dark' || 
                 (!localStorage.getItem('theme') && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
                 htmlElement.classList.add('dark');
@@ -1460,13 +1529,11 @@
                 htmlElement.classList.remove('dark');
             }
             
-            // Toggle theme on button click
             themeToggle.addEventListener('click', () => {
                 htmlElement.classList.toggle('dark');
                 localStorage.setItem('theme', htmlElement.classList.contains('dark') ? 'dark' : 'light');
             });
             
-            // Mobile menu functionality
             const mobileMenuButton = document.getElementById('mobile-menu-button');
             const mobileMenu = document.getElementById('mobile-menu');
             
@@ -1474,14 +1541,12 @@
                 mobileMenu.classList.toggle('hidden');
             });
             
-            // Close mobile menu when clicking on a link
             document.querySelectorAll('#mobile-menu a').forEach(link => {
                 link.addEventListener('click', () => {
                     mobileMenu.classList.add('hidden');
                 });
             });
             
-            // Smooth scrolling for navigation links
             document.querySelectorAll('a[href^="#"]').forEach(anchor => {
                 anchor.addEventListener('click', function (e) {
                     e.preventDefault();
@@ -1499,7 +1564,6 @@
                 });
             });
             
-            // Animate skill bars when they come into view
             const observerOptions = {
                 threshold: 0.5,
                 rootMargin: '0px 0px -100px 0px'
@@ -1524,7 +1588,6 @@
                 observer.observe(section);
             });
 
-            // Show toast notification
             function showToast(message, isError = false) {
                 const toast = document.getElementById('toast');
                 toast.textContent = message;
@@ -1544,20 +1607,17 @@
                 }, 3000);
             }
 
-            // Contact form submission with EmailJS
             document.getElementById('contact-form').addEventListener('submit', async function(e) {
                 e.preventDefault();
                 
                 const formData = new FormData(this);
                 const submitButton = this.querySelector('button[type="submit"]');
                 
-                // Change button text to indicate loading
                 const originalText = submitButton.innerHTML;
                 submitButton.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i> Sending...';
                 submitButton.disabled = true;
                 
                 try {
-                    // Prepare email data
                     const emailData = {
                         from_name: formData.get('name'),
                         from_email: formData.get('email'),
@@ -1566,14 +1626,12 @@
                         reply_to: formData.get('email')
                     };
                     
-                    // Send email using EmailJS
                     await emailjs.send(
                         'service_7wyyxe9', 
                         'template_mwhva5h', 
                         emailData
                     );
                     
-                    // Show success message
                     showToast('Message sent successfully! I\'ll get back to you soon.');
                     this.reset();
                     
@@ -1581,19 +1639,15 @@
                     console.error('EmailJS Error:', error);
                     showToast('Sorry, there was an error sending your message. Please try again later.', true);
                 } finally {
-                    // Restore button text
                     submitButton.innerHTML = originalText;
                     submitButton.disabled = false;
                 }
             });
 
-            // Fix for resume download
             document.querySelector('a[download]').addEventListener('click', function(e) {
-                // Allow the default download behavior
-                // This will download the file instead of trying to open it
+                // Download event handler
             });
 
-            // View All Projects modal functionality
             const viewAllProjectsBtn = document.getElementById('view-all-projects');
             const projectsModal = document.getElementById('projects-modal');
             const closeModal = document.querySelector('.close');
@@ -1615,7 +1669,6 @@
                 }
             });
 
-            // Create particles for background
             function createParticles() {
                 const particlesContainer = document.getElementById('particles');
                 const particleCount = 30;
@@ -1624,7 +1677,6 @@
                     const particle = document.createElement('div');
                     particle.classList.add('particle');
                     
-                    // Generate random values safely
                     const size = Math.floor(Math.random() * 5) + 2;
                     const posX = Math.floor(Math.random() * 100);
                     const posY = Math.floor(Math.random() * 100);
@@ -1642,10 +1694,8 @@
                 }
             }
             
-            // Initialize particles
             createParticles();
 
-            // Add animation to elements on scroll
             function animateOnScroll() {
                 const elements = document.querySelectorAll('.card-hover, .btn-primary, .social-icon');
                 
@@ -1654,7 +1704,6 @@
                 });
             }
             
-            // Initialize animations
             animateOnScroll();
         }
     </script>

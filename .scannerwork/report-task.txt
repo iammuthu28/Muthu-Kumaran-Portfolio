@@ -1,0 +1,6 @@
+projectKey=bio-for-my-website-report
+serverUrl=http://localhost:9000
+serverVersion=25.9.0.112764
+dashboardUrl=http://localhost:9000/dashboard?id=bio-for-my-website-report
+ceTaskId=6ffc6b69-16d7-418b-85de-0580dd098162
+ceTaskUrl=http://localhost:9000/api/ce/task?id=6ffc6b69-16d7-418b-85de-0580dd098162
